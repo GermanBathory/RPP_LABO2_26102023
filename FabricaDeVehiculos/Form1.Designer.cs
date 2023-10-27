@@ -41,6 +41,7 @@
             // lstVehiculos
             // 
             lstVehiculos.FormattingEnabled = true;
+            lstVehiculos.HorizontalScrollbar = true;
             lstVehiculos.ItemHeight = 15;
             lstVehiculos.Location = new Point(12, 14);
             lstVehiculos.Name = "lstVehiculos";
@@ -67,7 +68,9 @@
             // 
             // cmbTipo
             // 
+            cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.FormattingEnabled = true;
+            cmbTipo.Items.AddRange(new object[] { "Automovil", "Moto", "Camioneta" });
             cmbTipo.Location = new Point(544, 50);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(218, 23);
@@ -109,7 +112,9 @@
             Controls.Add(lstVehiculos);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Fabrica de vehiculos";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
